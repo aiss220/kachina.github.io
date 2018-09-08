@@ -4,40 +4,50 @@
 	<meta charset="UTF-8">
 	<title>Hair design KACHINA｜カチナ｜三重県四日市市の美容院</title>
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen">
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	 <script src="hover.js"></script>  	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
 	 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
-	<header>
+	<header class="header">
 		<h1>
 			<a href="index.html"><img src="img/Main_Logo.png" alt="kachina ロゴ"></a>
 		</h1>
 
-		<nav>
-			<ul>
-				<li>
+		<!--ハンバーガー-->
+	    <a class="menu">
+	        <span class="menu__line menu__line--top"></span>
+	        <span class="menu__line menu__line--center"></span>
+	        <span class="menu__line menu__line--bottom"></span>
+	    </a>	
+
+
+		<nav class="gnav">
+			<div class="gnav__wrap">
+			<ul class="gnav__menu">
+				<li class="gnav__menu__item">
 					<a class="page" href="index.html">top</a>
-				</li>
-				<li>
+				</li >
+				<li class="gnav__menu__item">
 					<a href="about.html">about</a>
 				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a href="menu.html">menu</a>
 				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a href="special.html">special</a>
 				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a href="access.html">access</a>
 				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a href="https://www.instagram.com/kachina_hair_design/" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
 				</li>
-				<li>
+				<li class="gnav__menu__item>
 					<a class="btn_reserve" href="reserve.html">reserve</a>
 				</li>
 			</ul>
+			</div><!--gnav-wrap-->
 		</nav>
 
 	</header>
