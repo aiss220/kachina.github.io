@@ -24,7 +24,7 @@ time, mark, audio, video {
     font-size: 100%;
     vertical-align: baseline;
 	color: #552E31;
-	transition: all 0.2s;
+	transition: all 0.4s;
 }
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -54,6 +54,8 @@ div#test {
 }
 .cf:after {clear: both;}
 .cf {*zoom: 1;}
+
+
 
 body {
 	font-family: ArialMT, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", メイリオ, sans-serif;
@@ -108,9 +110,6 @@ nav li a {
 
 nav li a:hover {
 	color: #91D2E5;	
-	border-bottom:1px solid #91D2E5;
-	padding-bottom:4px; 
-
 }
 
 nav li a.page {
@@ -136,6 +135,9 @@ nav li a.btn_reserve:hover {
 }
 
 
+nav li i.tel {
+	display: none;
+}
 
 
 /* ========================================
@@ -219,14 +221,24 @@ nav li a.btn_reserve:hover {
 	font-size: 0.75rem;
 	line-height: 2em;
 	letter-spacing: 0.2rem;
+	
 }
 
 
 .discription-left {
 	color: #552E31;
+	opacity: 0;
+	-webkit-animation: example 1.0s ease 1.0s 1 forwards;
+  	animation: example 1.0s ease 1.0s 1 forwards;
 }
 
-.discription-right img {
+.discription-right {
+	opacity: 0;
+	-webkit-animation: example 1.5s ease 1.5s 1 forwards;
+  	animation: example 1.5s ease 1.5s 1 forwards;
+}
+
+.discription-right img  {
 	width: 60%;
 }
 
@@ -239,7 +251,7 @@ nav li a.btn_reserve:hover {
 
 
 /* ========================================
-    about
+    全体
 ========================================= */
 
 h2.title {
@@ -260,7 +272,10 @@ h2.title {
 	width: 40vw;
 	height: 40vh;
 	float: left;
-	margin-bottom: 100px;
+	margin-bottom: 0px;
+	opacity: 0; 
+	 -webkit-animation: example 0.5s ease 0.5s 1 forwards;
+  	animation: example 0.5s ease 0.5s 1 forwards;
 }
 
 .left-img img {
@@ -279,23 +294,128 @@ h2.title {
 	width: 50vw;
 	height: auto;
 	padding: 10vh 0;
-	position: absolute;	
+	position: relative;	
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	top: 180px;
-	right: 5vw;
+	top: -25vh;
+	left: 35vw;
+	margin-bottom: -25vh;
 	font-size: 0.75rem;
 	line-height: 2em;
 	letter-spacing: 0.2rem;
 	background-color: rgba(145,210,229,0.1);
 	border-radius: 3px;
 	color: #552E31;
+	opacity: 0; 
+	-webkit-animation: example 0.5s ease 1.5s 1 forwards;
+	animation: example 0.5s ease 1.0s 1 forwards;
+
+}
+
+@-webkit-keyframes example {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes example {
+  100% {
+    opacity: 1;
+  }
 }
 
 .right p {
 	color: #552E31;
 }
+
+/* ========================================
+    about staff
+========================================= */
+
+
+.staff {
+	width: 80%;
+	margin: 0 auto;	
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 0; 
+	-webkit-animation: example 1.5s ease 0.5s 1 forwards;
+  	animation: example 0.5s ease 1.5s 1 forwards;
+}
+
+
+.member  {
+	width:  30%;
+	margin: 50px 10% ;
+	display: block;
+}
+
+.member_image {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.member_image img {
+	width: 100%;
+}
+
+.member_coment {
+	width: 100%;
+}
+
+.member section  h3 {
+	font-family: Copperplate, "Copperplate Gothic Light";
+	font-size: 0.8rem;
+	letter-spacing: 0.3rem;
+	color: #91D2E5;
+}
+
+
+.member section h2 {
+	font-family: Copperplate, "Copperplate Gothic Light";
+	font-size: 1.2rem;
+	letter-spacing: 0.3rem;
+	line-height: 1.5em;
+	color: #552E31;
+	margin-top: 10px;
+}
+
+.member section p {
+	font-size: 0.75rem;
+	line-height: 2em;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+}
+
+
+.recrute {
+	width: 30%;
+	align-items: center;
+	border: 1px solid #91D2E5;
+	border-radius: 2px;
+	margin: 30px auto ;
+	padding: 40px 8%;
+	text-align: center;
+}
+
+
+.recrute p { 
+	width: 100%;
+	font-size: 0.75rem;
+	line-height: 2em;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+	color: #91D2E5;
+}
+
+.recrute p.wanted {
+	font-family: Copperplate, "Copperplate Gothic Light";
+	font-size: 1.2rem;
+	letter-spacing: 0.3rem;
+	line-height: 1.5em;
+	color: #91D2E5;
+}
+
 
 
 /* ========================================
@@ -326,78 +446,6 @@ table.table01 tbody td {
 	padding:2px 15px;
 	vertical-align:top;
 }
- 
-@media screen and (max-width: 640px) {
-table.table01 thead {
-	display:none;
-}
-table.table01 tbody th {
-	display:block;
-}
-table.table01 tbody td {
-	display:block;
-}
-table.table01 tbody td::before {
-	content: attr(label);
-	float: left;
-	clear:both;
-	font-weight:bold;
-}
-table.table01 tbody td p {
-	padding-left:6em;
-}
-}
-
-.push-menu {
-	display: block;
-	width: 100%;
-	height: 300px;
-}
-
-
-/* ========================================
-    about staff
-========================================= */
-
-.staff {
-	width: 80%;
-	margin: 0 auto;
-}
-
-.member  {
-	width:  30%;
-	margin: 50px 10% ;
-	float: left;
-}
-
-.member_image {
-	float: left;
-	margin-bottom: 10px; 
-}
-
-.member section  h3 {
-	font-family: Copperplate, "Copperplate Gothic Light";
-	font-size: 0.8rem;
-	letter-spacing: 0.3rem;
-	color: #91D2E5;
-}
-
-.member section h2 {
-	font-family: Copperplate, "Copperplate Gothic Light";
-	font-size: 1.2rem;
-	letter-spacing: 0.3rem;
-	line-height: 1.5em;
-	color: #552E31;
-	margin-top: 10px;
-}
-
-.member section p {
-	font-size: 0.75rem;
-	line-height: 2em;
-	letter-spacing: 0.1rem;
-	margin-top: 10px;
-}
-
 
 
 /* ========================================
@@ -433,8 +481,9 @@ table.table01 tbody td p {
 }
 .special_logo {
 	float: left;
-	margin: 0 10%;
+	margin-top: 0 10%;
 	flex-grow: 1;
+
 }
 
 .special_pict   {
@@ -447,7 +496,8 @@ table.table01 tbody td p {
 }
 
 .special_contents section {
-	margin-top: 50px; 
+	width: 60%;
+	margin:50px auto 0 auto; 
 }
 
 .special_contents h4 {
@@ -474,9 +524,12 @@ table.table01 tbody td p {
 
 .map {
 	position: relative;
-	margin:0 auto 40px auto;
+	margin:40px auto;
 	padding-top: 40%;
-	border-radius: 3px;
+	border-radius: 3px;	
+	opacity: 0; 
+	-webkit-animation: example 1.5s ease 0.5s 1 forwards;
+  	animation: example 0.5s ease 1.5s 1 forwards;
 	}
 
 .map iframe,
@@ -561,27 +614,28 @@ footer {
 ============================================================================= */
 
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 1024px) {
 
 
-	　　/*  =========================================
-		header
-		===========================================*/
-		header.header {
+
+		header {
+			height: 40px;
+			width: 90%;
+			padding: 30px 5% 0 5%;		
+			margin:0;	
 			position: fixed;
-			top:0;
-			right:0;
-			width:100%;
-			height: 60px;
+			background-color: rgba(255,255,255,0.7);
+			z-index: 999;
 		}
 
 		header h1 {
 			width: 40%;
+		    z-index: 97;
 		}
 
 		a.menu{
 		    height: 20px;
-		    position: absolute;
+		    position: fixed;
 		    right: 20px;
 		    top: 20px;
 		    width: 30px;
@@ -632,27 +686,63 @@ footer {
 		    position: absolute;
 		    width: 100%;
 		}
+
 		.gnav__menu__item{
-			width: 70%;
-		    margin: 30px 0;
+			width: 100%;
+		    margin:16px 0;
+			text-align: center;
 		}
 		.gnav__menu__item a{
 		    color: #552E31;
 		    font-size: 1.2em;
-		    padding: 40px;
-		    text-decoration: none;
+		    padding: 30px 10%;
 		    transition: .5s;
 		}
 		.gnav__menu__item a:hover{
 		    color: #91D2E5;
 		}
-			
+
+		nav li a.btn_reserve {
+			display: flex;
+		    justify-content: center;
+			width: 50%;
+			border: solid #91D2E5 1px;
+			border-radius: 3px;
+			color: #91D2E5;
+			margin:0 12.5%;
+			}	
+
+		nav li i.tel {		
+			display: block;	
+			color: #91D2E5;
+			letter-spacing: 0.8rem;
+		}
+
+		/*a.tel {
+			display: block;
+		    position: fixed;
+		    right: 80px;
+		    top: 17px;	 
+		    border: solid #552E31 1px;   
+		    color: #552E31;
+		    padding: 8px;
+		    background-color: rgba(145,210,229,0.0);
+		    font-size: 0.7em;
+		    letter-spacing: 0.3em;
+			font-family: Copperplate, "Copperplate Gothic Light";
+		    text-decoration: none;
+		    }*/
+
+		
+
 		/* ========================================
 		    top main images
 		========================================= */
 		.wrapper {
+			position   : relative;
 			width: 100%;
 			margin: 0 auto;
+			padding-top: 80px; 
 			color: #552E31;
 		    animation: fadeIn 2s ease 0s 1 normal;
 		    -webkit-animation: fadeIn 2s ease 0s 1 normal;
@@ -671,8 +761,9 @@ footer {
 		.slide {
 		  position   : relative;
 		  overflow   : hidden;
-		  height     : 200px; 
-		  padding-bottom: 180px;
+		  width: 100%;
+		  height     : 30vh; 
+		  padding-bottom: 0;
 		}
 		 
 
@@ -712,16 +803,17 @@ footer {
 			display: flex;
 			flex-flow: column nowrap;
 			align-items: center;
+			justify-content: center;
 			width: 70%;
+			height: auto;
 			position: absolute;
-			top: 200px;
-			left: 10%;
-			background-color: rgba(234,250,255,0.6);
-			padding: 180px 5%;
+			top: 120px;
+			left: 15%;
+			background-color: rgba(234,250,255,0.0);
+			padding: 0;
 			border-radius: 3px;
-			margin: 65px 0; 
 			text-align: center;
-			font-size: 0.75rem;
+			font-size: 0.6rem;
 			line-height: 2em;
 			letter-spacing: 0.2rem;
 		}
@@ -734,30 +826,31 @@ footer {
 
 		.discription-right img {
 			width: 50%;
-			margin-bottom: 20px;
+			margin: 20px 0;
 			order:1;
 		}
 
 		.push-top {
-			height: 170px;
+			height: calc(50vh - 60px);
 			display: inline-block;
 		}
 
 
 		/* ========================================
-		    about
+		    全体
 		========================================= */
 
 		h2.title {
 			font-family: Copperplate, "Copperplate Gothic Light";
-			font-size: 1.7rem;
-			letter-spacing: 0.5rem;
+			font-size: 1.3rem;
+			letter-spacing: 0.3rem;
 			text-align: center;
-			margin: 30px 0;
+			margin-top:0;
+			margin-bottom: 20px;
 		}
 
 		.contents {
-			width: 90%;
+			width: 100%;
 			margin: 0 auto;
 		}
 
@@ -765,15 +858,13 @@ footer {
 			float: left;
 			width: 100%;
 			height: 30vh;
-			margin-bottom: 100px;
+			margin-bottom: 0px;
 		}
 
 		.left-img img {
 			width      : inherit;
 			height     : inherit;
 			object-fit: cover;
-			border-radius: 3px;
-
 		}
 
 		.clear {
@@ -782,12 +873,14 @@ footer {
 
 		.right {
 			display: flex;
-			position: absolute;	
-			top: 40vh;
-			left: 20%;
+			position: relative;	
+			top: -30px;
+			left: 0	;
 			width: 70%; 
+			margin-left: 20%;
+			margin-bottom:0;
 			padding: 50px 5%;
-			font-size: 0.75rem;
+			font-size: 0.6rem;
 			line-height: 2em;
 			letter-spacing: 0.2rem;
 			background-color: rgba(145,210,229,0.1);
@@ -797,8 +890,276 @@ footer {
 
 		.right p {
 			color: #552E31;
-			margin-left:10%;
 		}
+
+
+
+		/* ========================================
+		    about_staff
+		========================================= */
+
+		.staff {
+			width: 70%;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: 
+		}
+
+		.member  {
+			width:  100%;
+			margin: 5% ;
+			display: flex;
+			flex-flow: column nowrap;
+		}
+
+		.member_image {
+			float: left;
+			margin: 0 auto 10px auto; 
+		}
+
+		.member_image  img {		
+			width: 100%;
+			max-width: 400px;
+		}
+
+		.member_coment {
+			width: 100%;
+		}
+
+		.member section  h3 {
+			font-family: Copperplate, "Copperplate Gothic Light";
+			font-size: 0.5rem;
+			letter-spacing: 0.3rem;
+			color: #91D2E5;
+		}
+
+		.member section h2 {
+			font-family: Copperplate, "Copperplate Gothic Light";
+			font-size: 0.9rem;
+			letter-spacing: 0.2rem;
+			line-height: 1.5em;
+			color: #552E31;
+			margin-top: 10px;
+		}
+
+		.member section p {
+			font-size: 0.6rem;
+			line-height: 1.4em;
+			letter-spacing: 0.18rem;
+			margin-top: 10px;
+		}
+
+		.staff-push {
+			display: block;
+			height: 500px;
+		}
+
+		.recrute {
+			width: 50%;
+			align-items: center;
+			border: 1px solid #91D2E5;
+			border-radius: 2px;
+			margin: 30px auto ;
+			padding: 40px 8%;
+			text-align: center;
+		}
+
+
+		/* ========================================
+		    menu
+		========================================= */
+
+		table.table01 {
+		width:100%;
+		}
+		table.table01 thead th {
+			padding:25px 0px 0px 0px;
+		}
+
+		table.table01 tbody th {
+		color:#552E31;
+		padding:2px 0px;
+		}	
+
+		table.table01 tbody td {
+		padding:2px 0px;
+		}
+
+		/* ========================================
+		    special
+		========================================= */
+
+		.special_discription {
+			/*width: 90%;
+			margin: 0 auto 20px auto;
+			font-size: 0.6rem;
+			line-height: 2em;
+			letter-spacing: 0.2rem;
+			color: #552E31;*/
+			width: 90%; 
+			padding: 50px 5%;
+			font-size: 0.6rem;
+			line-height: 2em;
+			letter-spacing: 0.2rem;
+			background-image: url(img/menu_bg_right.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			border-radius: 3px;
+			color: #552E31;
+		}
+
+		.special_discription p {
+			width: 70%;
+			margin: 0 15%;
+		}
+
+
+		.special_contents {
+			width: 70%;
+			height: auto;
+			margin: 0 auto 80px auto;
+			background-image: none;
+			padding: 0;
+			text-align: center;
+		}
+
+		.special_visual {
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-around;
+			align-items: center;
+
+		}
+
+
+		.special_logo {
+			clear: left;
+			margin: 30px auto 10px auto;
+			order: 2;
+		}
+
+		.special_logo img {
+			width: 80%;
+		}
+
+
+		.special_pict   {
+			clear: left;
+			order: 1;
+		}
+
+		.special_pict img {
+			width: 90%;
+		}
+
+		.special_contents section {
+			margin: 20px 5% 0 5%; 
+			width: 90%;
+			text-align: left;
+		}
+
+		.special_contents h4 {
+			font-family: Copperplate, "Copperplate Gothic Light";
+			font-size: 1.0rem;
+			color: #91D2E5;
+			letter-spacing: 0.3rem;
+			margin-bottom: 20px; 
+		}
+
+		.special_contents p {
+			font-size: 0.6rem;
+			line-height: 2em;
+			letter-spacing: 0.2rem;
+			color: #552E31;
+		}
+
+
+
+
+
+
+
+		/* ========================================
+		    access
+		========================================= */
+
+
+		.map {
+			position: relative;
+			margin:0 auto 40px auto;
+			padding-top: 100%;
+			border-radius: 3px;
+			}
+
+		.map iframe,
+		.map object,
+		.map embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		/* ========================================
+		    reserve
+		========================================= */
+
+		.reserve_bg {
+			width: 100%;
+			margin: 0 auto;
+			background-image: url(img/reserve_pc.png);
+		 	background-size:cover;
+			background-position: center center; 
+		 	border-radius: 3px; 
+		 	text-align: center;
+		}
+
+		 .reserve {
+		 	width: 80%;
+		 	margin: 0px auto;
+		 	padding: 10vh 0;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			font-size: 0.6rem;
+			line-height: 2em;
+			letter-spacing: 0.2rem;
+			background-color: rgba(255,255,255,0.7);
+			border-radius: 3px;
+			color: #552E31;
+		 	line-height: 2.0;
+		 }
+
+
+		.reserve_tel  a {
+			font-family: Copperplate, "Copperplate Gothic Light";
+			font-size: 1.5rem;
+			color: #91D2E5;
+		}
+
+		.reserve_tel a:hover {	
+			opacity: 0.5;
+		}
+
+
+
+
+		/* ========================================
+		    footer
+		========================================= */
+
+
+		footer {
+			width: 100%;
+			height: 50px;
+			font-size: 0.5rem;
+			letter-spacing: 0.15rem;
+			display: inline-block;
+			text-align: center;
+			}
 
 
 }/*=======ここまで*=======/
