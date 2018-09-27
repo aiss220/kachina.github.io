@@ -4,40 +4,55 @@
 	<meta charset="UTF-8">
 	<title>Hair design KACHINA｜カチナ｜三重県四日市市の美容院</title>
 	<link rel="stylesheet" href="stylesheet.css" type="text/css" media="screen">
-	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	 <script src="hover.js"></script>
-  
+	<link rel="icon" href="img/fabicon.png" sizes="16x16" type="image/png"> 
+	<link rel="icon" href="img/fabicon.png" sizes="32x32" type="image/png">  
+	<link rel="icon" href="img/fabicon.png" sizes="48x48" type="image/png"> 
+	<link rel="icon" href="img/fabicon.png" sizes="62x62" type="image/png">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
+	 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
-	<header>
+	<header class="header">
 		<h1>
 			<a href="index.html"><img src="img/Main_Logo.png" alt="kachina ロゴ"></a>
 		</h1>
 
-		<nav>
-			<ul>
-				<li>
+		<!--ハンバーガー-->
+	    <a class="menu">
+	        <span class="menu__line menu__line--top"></span>
+	        <span class="menu__line menu__line--center"></span>
+	        <span class="menu__line menu__line--bottom"></span>
+	    </a>	
+
+
+		<nav class="gnav">
+			<div class="gnav__wrap">
+			<ul class="gnav__menu">
+				<li class="gnav__menu__item">
 					<a href="index.html">top</a>
+				</li >
+				<li class="gnav__menu__item">
+					<a href="about.html">about</a>
 				</li>
-				<li>
-					<a  href="about.html">about</a>
-				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a class="page" href="menu.html">menu</a>
 				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a href="special.html">special</a>
 				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a href="access.html">access</a>
 				</li>
-				<li>
+				<li class="gnav__menu__item">
 					<a href="https://www.instagram.com/kachina_hair_design/" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
 				</li>
-				<li>
-					<a class="btn_reserve" href="reserve.html">reserve</a>
-				</li>
+				<li class="gnav__menu__item">
+					<a class="btn_reserve" href="reserve.html"><i class="fas fa-phone tel"></i> reserve</a>
+				</li>				
 			</ul>
+			</div><!--gnav-wrap-->
 		</nav>
 
 	</header>
@@ -64,15 +79,15 @@
 				    <tbody>
 				      <tr>
 				        <th>adult</th>
-				        <td label="cut adult ¥4,000"><p>¥4,000</p></td>
+				        <td ><p>¥4,000〜</p></td>
 				      </tr>
 				      <tr>
 				        <th>students</th>
-				        <td label="cut student ¥3,000-3,500"><p>¥3,000-3,500</p></td>
+				        <td ><p>¥3,000〜3,500</p></td>
 				      </tr>
 				      <tr>
 				        <th>kids</th>
-				        <td label="cut kids ¥2,500"><p>¥2,500</p></td>
+				        <td ><p>¥2,500〜</p></td>
 				      </tr>
 				    </tbody>
 				    <thead>
@@ -82,11 +97,11 @@
 				      <tbody>
 				      <tr>
 				        <th>color</th>
-				        <td label="color ¥5,000"><p>¥5,000-</p></td>
+				        <td ><p>¥5,000〜</p></td>
 				      </tr>
 				      <tr>
 				        <th>highlight or lowlight</th>
-				        <td label="highlight or lowlight"><p>¥3,000-</p></td>
+				        <td ><p>¥3,000〜</p></td>
 				      </tr>
 				    </tbody>
 				    </thead>
@@ -98,11 +113,11 @@
 				      <tbody>
 				      <tr>
 				        <th>parm</th>
-				        <td label="parm ¥5,000"><p>¥5,000-</p></td>
+				        <td ><p>¥5,000〜</p></td>
 				      </tr>
 				      <tr>
 				        <th>point parm</th>
-				        <td label="point parm ¥3,000"><p>¥3,000-</p></td>
+				        <td ><p>¥3,000〜</p></td>
 				      </tr>
 				    </tbody>
 				    </thead>
@@ -114,11 +129,11 @@
 				      <tbody>
 				      <tr>
 				        <th>treatment</th>
-				        <td label="treatment ¥2,100"><p>¥2,100-</p></td>
+				        <td ><p>¥2,100〜</p></td>
 				      </tr>
 				      <tr>
 				        <th>hair set</th>
-				        <td label="hair set ¥3,000"><p>¥3,000-</p></td>
+				        <td ><p>¥3,000〜</p></td>
 				      </tr>
 				    </tbody>
 				    </thead>
@@ -129,7 +144,6 @@
 		
 
 			<div class="clear"></div> <!--回り込み解除-->
-			<div class="push-menu"></div>
 
 		</div>
 
