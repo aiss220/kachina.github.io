@@ -928,7 +928,7 @@ footer {
 
 		.member section  h3 {
 			font-family: Copperplate, "Copperplate Gothic Light";
-			font-size: 0.5rem;
+			font-size: 0.7rem;
 			letter-spacing: 0.3rem;
 			color: #91D2E5;
 		}
@@ -939,7 +939,7 @@ footer {
 			letter-spacing: 0.2rem;
 			line-height: 1.5em;
 			color: #552E31;
-			margin-top: 10px;
+			margin-top: 6px;
 		}
 
 		.member section p {
